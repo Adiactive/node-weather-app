@@ -1,0 +1,26 @@
+{
+  "name": "web-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "express": "^4.17.1",
+    "hbs": "^4.1.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Adiactive/node-weather-app.git"
+  },
+  "author": "Rongzhi Gu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Adiactive/node-weather-app/issues"
+  },
+  "homepage": "https://github.com/Adiactive/node-weather-app#readme"
+}

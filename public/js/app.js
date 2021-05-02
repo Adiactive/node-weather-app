@@ -1,13 +1,3 @@
-const HOST_URL = "http://localhost:3000"
-
-// fetch(`${HOST_URL}/weather` + new URLSearchParams({
-//     search: 'Ottawa',
-// })).then((response) => {
-//     response.json().then((data) => {
-//         console.log(data)
-//     })
-// })
-
 const weatherForm = document.querySelector('form')
 const seatchInput = document.querySelector('input')
 const msg1 = document.getElementById('msg-1')
@@ -19,7 +9,7 @@ msg2.textContent = ""
 weatherForm.addEventListener('submit', (e) => {
     e.preventDefault()
 
-    axios.get(`${HOST_URL}/weather`, {
+    axios.get(`/weather`, {
         params: {
             search: seatchInput.value,
         },
