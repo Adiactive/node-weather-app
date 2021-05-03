@@ -50,10 +50,10 @@ app.get('/weather', (req, res) => {
     }
 
     geocode(req.query.search).then(({ location, latitude, longtitude }) => {
-        forcast(latitude, longtitude).then((forcastData) => {
+        forcast(latitude, longtitude).then((weather) => {
             return res.send({
                 location,
-                forcast: forcastData,
+                weather,
             })
         }).catch((error) => {
             return res.send({ error })

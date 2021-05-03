@@ -13,7 +13,10 @@ function forcast(latitude, longtitude) {
             if (data.error) {
                 reject(`${data.error.type}: ${data.error.info}`)
             }
-            resolve(`${data.current.weather_descriptions}. It is currently ${data.current.temperature} degrees out. It feels like ${data.current.feelslike} degrees out.`)
+            resolve({
+                icon: data.current.weather_icons,
+                description: `${data.current.weather_descriptions}. It is currently ${data.current.temperature} degrees out. It feels like ${data.current.feelslike} degrees out.`
+            })
         } catch (error) {
             reject('Unable to connect to weather service!')
         }

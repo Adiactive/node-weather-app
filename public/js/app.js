@@ -1,10 +1,11 @@
 const weatherForm = document.querySelector('form')
 const seatchInput = document.querySelector('input')
-const msg1 = document.getElementById('msg-1')
-const msg2 = document.getElementById('msg-2')
+const location = document.getElementById('location')
+const weatherDescription = document.getElementById('weather-description')
+const weatherIcon = document.getElementById('weather-icon')
 
-msg1.textContent = ""
-msg2.textContent = ""
+location.textContent = ""
+weatherDescription.textContent = ""
 
 weatherForm.addEventListener('submit', (e) => {
     e.preventDefault()
@@ -15,12 +16,13 @@ weatherForm.addEventListener('submit', (e) => {
         },
     }).then(({data}) => {
         if (data.error){
-            msg1.textContent = data.error
-            msg2.textContent = ""
+            location.textContent = data.error
+            weatherDescription.textContent = ""
         }
         else{
-            msg1.textContent = data.location
-            msg2.textContent = data.forcast
+            location.textContent = data.location
+            weatherIcon.src = data.weather.icon
+            weatherDescription.textContent = data.weather.description
         }
     })
 })

@@ -53,3 +53,18 @@ button {
     color: white;
     padding: 8px;
 }
+
+.weather-info {
+    display: flex;
+    align-items: center;
+    margin: 16px auto;
+}
+
+.weather-info img {
+    width: 35px;
+}
+
+.weather-info p {
+    float: left;
+    margin-right: 16px;
+}
